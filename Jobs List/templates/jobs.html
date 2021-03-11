@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Профессия</title>
+    </head>
+    <body>
+	{% if list == "ol" %}
+        	<h2>Список профессий</h2>
+		<ol>
+		{% for item in jobs %}
+			<li>{{item}}</li>
+		{% endfor %}
+		</ol>
+	{% else %}
+		{% if list == "ul" %}
+			<h2>Список профессий</h2>
+			<ul>
+			{% for item in jobs %}
+				<li>{{item}}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<h2>Не удалось загрузить</h2>
+		{% endif %}
+	{% endif %}
+
+    </body>
+</html>
