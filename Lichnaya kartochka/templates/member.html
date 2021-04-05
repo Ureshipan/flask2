@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+   .space {
+    padding: 20px; /* Поля */
+    background: silver; /* Цвет фона */
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+   }
+   div {
+   text-align: center;
+   }
+
+
+</style>
+
+<div class="space">
+    <div> {{member['name']}} {{member['surname']}}</div>
+    <img src="/static/data/{{member['photo']}}" width="450" height="300">
+    <div>{{member["specialty"]}}</div>
+</div>
+
+
+{% endblock %}
